@@ -1,0 +1,117 @@
+<mxfile host="app.diagrams.net" modified="2026-06-04T00:00:00.000Z" agent="blueprint-gen" version="24.0.0">
+  <diagram name="Customer Review AI TO-BE" id="blueprint-cr-ai">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1160" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Customer Review AI — TO-BE Blueprint (Credit / CIS)" style="text;html=1;fontSize=18;fontStyle=1;align=left;verticalAlign=middle;" vertex="1" parent="1"><mxGeometry x="40" y="10" width="900" height="26" as="geometry"/></mxCell>
+        <mxCell id="laneB" value="CIS Auto-Review Engine  (System)" style="swimlane;html=1;horizontal=0;startSize=34;fontStyle=1;verticalAlign=middle;strokeColor=#666666;fillColor=#eef3fb;" vertex="1" parent="1"><mxGeometry x="40" y="40" width="2010" height="230" as="geometry"/></mxCell>
+        <mxCell id="laneG" value="AI Review Agent — NexChat  (System / compute)" style="swimlane;html=1;horizontal=0;startSize=34;fontStyle=1;verticalAlign=middle;strokeColor=#666666;fillColor=#eef7ed;" vertex="1" parent="1"><mxGeometry x="40" y="270" width="2010" height="210" as="geometry"/></mxCell>
+        <mxCell id="laneO" value="Customer Review Queue — Credit-Owned Orchestration" style="swimlane;html=1;horizontal=0;startSize=34;fontStyle=1;verticalAlign=middle;strokeColor=#666666;fillColor=#fff5ec;" vertex="1" parent="1"><mxGeometry x="40" y="480" width="2010" height="240" as="geometry"/></mxCell>
+        <mxCell id="laneP" value="Credit Analyst — Manual Review  (Human)" style="swimlane;html=1;horizontal=0;startSize=34;fontStyle=1;verticalAlign=middle;strokeColor=#666666;fillColor=#f4eff7;" vertex="1" parent="1"><mxGeometry x="40" y="720" width="2010" height="290" as="geometry"/></mxCell>
+        <mxCell id="start" value="Monthly:
+Customer Due for review next month" style="ellipse;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1"><mxGeometry x="95" y="100" width="150" height="70" as="geometry"/></mxCell>
+        <mxCell id="d_limit" value="Credit Limit &amp;lt; 51k?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1"><mxGeometry x="295" y="95" width="145" height="80" as="geometry"/></mxCell>
+        <mxCell id="g_excl_auto" value="Exclusion
+Auto Review?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1"><mxGeometry x="480" y="95" width="150" height="80" as="geometry"/></mxCell>
+        <mxCell id="t_sendfs_auto" value="Send FS Req Email To Customer
+(on behalf of Email Agent)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="660" y="97" width="176" height="76" as="geometry"/></mxCell>
+        <mxCell id="t_rules" value="Customer Review Rules
+(ADP, Balance, Relationship,
+Bad Debt, etc.)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="860" y="92" width="180" height="86" as="geometry"/></mxCell>
+        <mxCell id="d_count" value="Auto-Review
+Count = 3?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1065" y="95" width="150" height="80" as="geometry"/></mxCell>
+        <mxCell id="t_sendreport" value="Send Report To Biz Users" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="1240" y="100" width="165" height="70" as="geometry"/></mxCell>
+        <mxCell id="e_auto_complete" value="Auto Review
+Complete" style="ellipse;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1430" y="100" width="155" height="70" as="geometry"/></mxCell>
+        <mxCell id="t_force_manual" value="Setup Force Manual Review
+Indicator and Reset Count" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="1055" y="185" width="170" height="70" as="geometry"/></mxCell>
+        <mxCell id="t_preview" value="Review Agent:
+Pre-review and Customize FS Req" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="660" y="335" width="176" height="80" as="geometry"/></mxCell>
+        <mxCell id="t_recv_resp_ai" value="Email Agent:
+Receive Customer's Response" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="860" y="335" width="180" height="80" as="geometry"/></mxCell>
+        <mxCell id="t_ai_review" value="Review Agent:
+AI Review" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="1065" y="339" width="150" height="72" as="geometry"/></mxCell>
+        <mxCell id="t_ai_summary" value="Review Agent:
+AI Summary and Suggestions" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="1240" y="335" width="175" height="80" as="geometry"/></mxCell>
+        <mxCell id="e_ai_complete" value="AI Review
+Complete" style="ellipse;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1440" y="340" width="150" height="70" as="geometry"/></mxCell>
+        <mxCell id="t_need_ai" value="Need AI assistance
+Customer Que" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="290" y="547" width="165" height="76" as="geometry"/></mxCell>
+        <mxCell id="d_excl_ai" value="Exclusion
+AI Review" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1"><mxGeometry x="475" y="543" width="150" height="84" as="geometry"/></mxCell>
+        <mxCell id="t_send_email_q" value="Send Email To Customer
+(on behalf of Email Agent)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="655" y="545" width="176" height="80" as="geometry"/></mxCell>
+        <mxCell id="t_record_raw" value="Record Raw Files" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="855" y="549" width="150" height="72" as="geometry"/></mxCell>
+        <mxCell id="t_call_ai" value="Call AI Review" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="1045" y="549" width="150" height="72" as="geometry"/></mxCell>
+        <mxCell id="d_ai_ok" value="AI Review OK?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#b85450;dashed=1;strokeWidth=2;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1230" y="543" width="140" height="84" as="geometry"/></mxCell>
+        <mxCell id="t_consolidate" value="Consolidate Data
+and display" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="1430" y="549" width="170" height="72" as="geometry"/></mxCell>
+        <mxCell id="t_update_cis_q" value="Update Customer in CIS
+(Next Review Date, Credit limit,
+Terms, Notes)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="1622" y="539" width="180" height="92" as="geometry"/></mxCell>
+        <mxCell id="t_manual_sendfs" value="Manual Send FS Req
+Email to Customer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="290" y="776" width="165" height="78" as="geometry"/></mxCell>
+        <mxCell id="t_recv_resp_m" value="Receive Customer's
+Response" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="475" y="776" width="160" height="78" as="geometry"/></mxCell>
+        <mxCell id="t_forward_email" value="forward to Email Agent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="655" y="779" width="155" height="72" as="geometry"/></mxCell>
+        <mxCell id="t_manual_review" value="Manual Review" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="1430" y="779" width="170" height="72" as="geometry"/></mxCell>
+        <mxCell id="d_approve" value="Approved?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1642" y="773" width="140" height="84" as="geometry"/></mxCell>
+        <mxCell id="t_update_cis_m" value="Update Customer in CIS
+(Next Review Date, Credit limit,
+Terms, Notes)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;arcSize=8;" vertex="1" parent="1"><mxGeometry x="1622" y="888" width="180" height="85" as="geometry"/></mxCell>
+        <mxCell id="e_manual_complete" value="Manual Review
+Complete" style="ellipse;html=1;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=11;" vertex="1" parent="1"><mxGeometry x="1840" y="779" width="160" height="72" as="geometry"/></mxCell>
+        <mxCell id="legend" value="LEGEND
+Blue = CIS Auto-Review (system)   Green = AI Review Agent (NexChat)
+Orange = Credit-owned queue/orchestration   Purple = Analyst (human)
+Red dashed = Credit-SE enhancement (persistence / logging / fail-safe)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=top;fontSize=10;spacingLeft=6;spacingTop=4;" vertex="1" parent="1"><mxGeometry x="40" y="1025" width="540" height="82" as="geometry"/></mxCell>
+        <mxCell id="noteA" value="PERSISTENCE  — on 'Record Raw Files'
+Write raw files + AI output to the credit-owned
+store. The Queue is the system of record
+(not the chat session)." style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;size=14;align=left;verticalAlign=top;fontSize=10;spacingLeft=4;" vertex="1" parent="1"><mxGeometry x="600" y="1025" width="320" height="82" as="geometry"/></mxCell>
+        <mxCell id="noteB" value="LOGGING  — on 'Call AI Review'
+Record request + response envelope as our own
+audit trail. NexChat is a compute service,
+not a store." style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;size=14;align=left;verticalAlign=top;fontSize=10;spacingLeft=4;" vertex="1" parent="1"><mxGeometry x="940" y="1025" width="320" height="82" as="geometry"/></mxCell>
+        <mxCell id="noteC" value="FAIL-SAFE (new) — on 'AI Review OK?'
+On AI error/timeout the case stays in the queue,
+inputs preserved, routed to manual.
+Nothing is lost." style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;size=14;align=left;verticalAlign=top;fontSize=10;spacingLeft=4;" vertex="1" parent="1"><mxGeometry x="1280" y="1025" width="330" height="82" as="geometry"/></mxCell>
+        <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="start" target="d_limit"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d_limit" target="g_excl_auto"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e3" value="No (&gt;=51k)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d_limit" target="t_manual_sendfs"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="367" y="210"/><mxPoint x="255" y="210"/><mxPoint x="255" y="815"/></Array></mxGeometry></mxCell>
+        <mxCell id="e4" value="Included" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="g_excl_auto" target="t_sendfs_auto"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e5" value="Excluded" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;strokeColor=#999999;" edge="1" parent="1" source="g_excl_auto" target="e_auto_complete"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="555" y="62"/><mxPoint x="1507" y="62"/></Array></mxGeometry></mxCell>
+        <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_sendfs_auto" target="t_rules"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_rules" target="d_count"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e8" value="No (&lt;3)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d_count" target="t_sendreport"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e9" value="Yes (=3)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d_count" target="t_force_manual"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_sendreport" target="e_auto_complete"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e11" value="force manual / assist" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_force_manual" target="t_need_ai"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1140" y="300"/><mxPoint x="372" y="300"/></Array></mxGeometry></mxCell>
+        <mxCell id="e12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_need_ai" target="d_excl_ai"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e13" value="included" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d_excl_ai" target="t_send_email_q"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e14" value="excluded" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.2;entryY=0;entryDx=0;entryDy=0;dashed=1;strokeColor=#999999;" edge="1" parent="1" source="d_excl_ai" target="t_manual_review"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="550" y="750"/><mxPoint x="1464" y="750"/></Array></mxGeometry></mxCell>
+        <mxCell id="e15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_send_email_q" target="t_record_raw"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_record_raw" target="t_call_ai"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e17" value="invoke AI agent" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_call_ai" target="t_preview"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1120" y="500"/><mxPoint x="748" y="500"/></Array></mxGeometry></mxCell>
+        <mxCell id="e18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_preview" target="t_recv_resp_ai"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_recv_resp_ai" target="t_ai_review"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_ai_review" target="t_ai_summary"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_ai_summary" target="e_ai_complete"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e22" value="return result" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="e_ai_complete" target="d_ai_ok"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1515" y="500"/><mxPoint x="1300" y="500"/></Array></mxGeometry></mxCell>
+        <mxCell id="e23" value="OK" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="d_ai_ok" target="t_consolidate"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e24" value="AI failed → manual (inputs preserved)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;dashed=1;strokeColor=#b85450;strokeWidth=2;fontColor=#b85450;" edge="1" parent="1" source="d_ai_ok" target="t_manual_review"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1300" y="760"/><mxPoint x="1566" y="760"/></Array></mxGeometry></mxCell>
+        <mxCell id="e25" value="display for analyst" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_consolidate" target="t_manual_review"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_manual_sendfs" target="t_recv_resp_m"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_recv_resp_m" target="t_forward_email"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_forward_email" target="t_manual_review"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_manual_review" target="d_approve"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e30" value="Yes, approved" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="d_approve" target="t_update_cis_q"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e31" value="Rejected" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="d_approve" target="t_update_cis_m"><mxGeometry relative="1" as="geometry"></mxGeometry></mxCell>
+        <mxCell id="e32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_update_cis_q" target="e_manual_complete"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1920" y="585"/></Array></mxGeometry></mxCell>
+        <mxCell id="e33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;jettySize=auto;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="t_update_cis_m" target="e_manual_complete"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1920" y="930"/></Array></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
